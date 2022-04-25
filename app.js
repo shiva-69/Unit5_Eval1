@@ -89,11 +89,15 @@ const renderData = (data) =>{
     data.abilities.forEach((ele) =>{
         ability.textContent += ele.ability.name + ",";
     })
-    let height = data.height;
-    let id = data.id;
+    let height = document.createElement("div");
+    height = data.height;
+    let id = document.createElement("div");
+    id = data.id;
     
-    let moves = document
+    let moves = document.createElement("div");
     data.moves.forEach((ele) =>{
-
+        moves.textContent += ele.move.name + ",";
     })
+    console.log(moves)
+    infoContainer.append(height , id , moves , ability);
 }
